@@ -25,7 +25,7 @@ import java.util.List;
 
 import me.hoangchunghien.popularmovies.R;
 
-public abstract class PagingRecyclerAdapter<T, VH extends RecyclerView.ViewHolder>
+public abstract class EndlessRecyclerAdapter<T, VH extends RecyclerView.ViewHolder>
         extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     protected static final int VIEW_TYPE_LOAD_MORE = 1;
@@ -39,7 +39,7 @@ public abstract class PagingRecyclerAdapter<T, VH extends RecyclerView.ViewHolde
 
     protected boolean showLoadMore = false;
 
-    public PagingRecyclerAdapter(@NonNull Context context, @NonNull List<T> items) {
+    public EndlessRecyclerAdapter(@NonNull Context context, @NonNull List<T> items) {
         mInflater = LayoutInflater.from(context);
         mItems = items;
     }
